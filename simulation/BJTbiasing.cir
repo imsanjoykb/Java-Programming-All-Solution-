@@ -1,0 +1,22 @@
+* C:\Users\Sanjoy Kumar\Documents\BJTbiasing.sch
+
+* Schematics Version 9.2
+* Sat Jan 27 20:12:29 2018
+
+
+
+** Analysis setup **
+.DC LIN V_VCC 10 50 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "BJTbiasing.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

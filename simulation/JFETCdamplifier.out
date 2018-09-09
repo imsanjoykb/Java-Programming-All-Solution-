@@ -1,0 +1,150 @@
+
+**** 01/31/18 04:42:26 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\JFETCdamplifier.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Wed Jan 31 04:42:26 2018
+
+
+
+** Analysis setup **
+.DC LIN V_VDD 20 100 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "JFETCdamplifier.net"
+
+
+
+**** INCLUDING JFETCdamplifier.net ****
+* Schematics Netlist *
+
+
+
+R_R2         $N_0001 0  2.7Meg  
+R_R3         $N_0002 0  3.3k  
+C_C2         $N_0002 $N_0003  0.47uF  
+R_R4         $N_0003 0  2.7k  
+R_R1         $N_0004 $N_0001  6.8Meg  
+J_J1         $N_0002 $N_0005 $N_0004 J2N3822 
+C_C1         $N_0006 $N_0005  0.47uF  
+V_V5         $N_0006 0 DC 0V AC 150mV 
+V_VDD         $N_0004 0 20V
+
+**** RESUMING JFETCdamplifier.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 01/31/18 04:42:26 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\JFETCdamplifier.sch
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N3822         
+               NJF             
+         VTO   -1.962        
+        BETA    1.100000E-03 
+      LAMBDA    4.090000E-03 
+          IS  181.300000E-15 
+         ISR    1.747000E-12 
+       ALPHA    2.543000E-06 
+          VK  152.2          
+          RD    1            
+          RS    1            
+         CGD    4.000000E-12 
+         CGS    4.627000E-12 
+           M     .3114       
+          PB     .5          
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF   10.200000E-18 
+
+
+**** 01/31/18 04:42:26 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\JFETCdamplifier.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.6842                   ($N_0002)   14.9980                       
+
+($N_0003)    0.0000                   ($N_0004)   20.0000                       
+
+($N_0005)   15.0530                   ($N_0006)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         0.000E+00
+    V_VDD       -4.547E-03
+
+    TOTAL POWER DISSIPATION   9.09E-02  WATTS
+
+
+**** 01/31/18 04:42:26 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\JFETCdamplifier.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** JFETS
+
+
+NAME         J_J1      
+MODEL        J2N3822   
+ID          -4.54E-03 
+VGS         -4.95E+00 
+VDS         -5.00E+00 
+GM           4.52E-03 
+GDS          1.82E-05 
+CGS          2.20E-12 
+CGD          4.13E-12 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .38
+

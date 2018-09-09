@@ -1,0 +1,23 @@
+* C:\Users\Sanjoy Kumar\Documents\BJTsignalanalysis.sch
+
+* Schematics Version 9.2
+* Sat Jan 27 20:38:12 2018
+
+
+
+** Analysis setup **
+.ac DEC 20 10Hz 10MHz
+.DC LIN V_VIN 10hz 10MHz 20 pts/decade 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "BJTsignalanalysis.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

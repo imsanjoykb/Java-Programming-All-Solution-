@@ -1,0 +1,22 @@
+* C:\Users\Sanjoy Kumar\Documents\DcNosInverter.sch
+
+* Schematics Version 9.2
+* Wed Jan 31 00:28:50 2018
+
+
+
+** Analysis setup **
+.DC LIN V_Vgg 0 10 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "DcNosInverter.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

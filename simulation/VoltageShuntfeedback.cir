@@ -1,0 +1,21 @@
+* C:\Users\Sanjoy Kumar\Documents\VoltageShuntfeedback.sch
+
+* Schematics Version 9.2
+* Wed Jan 31 00:23:09 2018
+
+
+
+** Analysis setup **
+.ac DEC 20 10 1Mhz
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "VoltageShuntfeedback.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

@@ -1,0 +1,22 @@
+* C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+* Schematics Version 9.2
+* Wed Jan 31 05:20:52 2018
+
+
+
+** Analysis setup **
+.DC LIN V_V1 1 100 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "RcPhaseShift.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

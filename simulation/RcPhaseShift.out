@@ -1,0 +1,234 @@
+
+**** 01/31/18 05:20:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Wed Jan 31 05:20:52 2018
+
+
+
+** Analysis setup **
+.DC LIN V_V1 1 100 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "RcPhaseShift.net"
+
+
+
+**** INCLUDING RcPhaseShift.net ****
+* Schematics Netlist *
+
+
+
+C_C2         $N_0001 $N_0002  1n  
+C_C1         $N_0003 $N_0001  1n  
+C_C3         $N_0002 $N_0004  1n  
+R_R1         0 $N_0001  1k  
+R_R2         0 $N_0002  1k  
+R_R3         0 $N_0004  1k  
+V_V2         $N_0005 $N_0004 0V
+R_R4         $N_0004 $N_0006  1k  
+X_U1         $N_0006 0 $N_0007 $N_0005 $N_0003 uA741
+R_R5         $N_0003 $N_0006  1k  
+V_V1         0 $N_0007 0V
+
+**** RESUMING RcPhaseShift.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 01/31/18 05:20:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 01/31/18 05:20:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 01/31/18 05:20:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U1.6)    1.6505 (X_U1.7)  -40.3220 (X_U1.8)  -40.3220 (X_U1.9)    0.0000     
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)  -38.2910                   ($N_0004)  -38.4750                       
+
+($N_0005)  -38.4750                   ($N_0006)  -38.3830                       
+
+($N_0007)    0.0000                   (X_U1.10)    -.6445                       
+
+(X_U1.11)    -.0870                   (X_U1.12)-207.0E-09                       
+
+(X_U1.13)    -.6141                   (X_U1.14)    -.6445                       
+
+(X_U1.53)   -1.0000                   (X_U1.54)  -37.4750                       
+
+(X_U1.90)  -40.6090                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)  -19.2380                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -3.857E-02
+    V_V1         2.135E-03
+    X_U1.vb      1.651E-05
+    X_U1.vc      3.729E-11
+    X_U1.ve     -4.070E-02
+    X_U1.vlim   -4.061E-02
+    X_U1.vlp    -8.061E-11
+    X_U1.vln     1.342E-05
+
+    TOTAL POWER DISSIPATION   4.02E-02  WATTS
+
+
+**** 01/31/18 05:20:52 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\RcPhaseShift.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.ga     X_U1.gcm  
+I-SOURCE    -1.639E-05   1.108E-07
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.egnd 
+V-SOURCE    -1.924E+01
+I-SOURCE     4.061E-02
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.fb   
+I-SOURCE     2.517E-01
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.hlim 
+V-SOURCE    -4.061E+01
+I-SOURCE     1.342E-05
+
+
+**** DIODES
+
+
+NAME         X_U1.dc     X_U1.de     X_U1.dlp    X_U1.dln    X_U1.dp   
+MODEL        X_U1.dy     X_U1.dy     X_U1.dx     X_U1.dx     X_U1.dx   
+ID          -3.73E-11    4.07E-02   -8.06E-11    1.34E-05   -3.85E-11 
+VD          -3.73E+01    8.16E-01   -8.06E+01    6.09E-01   -3.85E+01 
+REQ          1.00E+12    6.35E-01    1.00E+12    1.93E+03    1.00E+12 
+CAP          1.62E-12    1.86E-11    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1.q1     X_U1.q2   
+MODEL        X_U1.qx     X_U1.qx   
+IB           1.75E-07   -3.88E-11 
+IC           1.64E-05    3.90E-11 
+VBE          6.14E-01   -3.77E+01 
+VBC          8.70E-02   -3.84E+01 
+VCE          5.27E-01    6.45E-01 
+BETADC       9.38E+01   -1.01E+00 
+GM           6.34E-04    0.00E+00 
+RPI          1.48E+05    9.38E+13 
+RX           0.00E+00    0.00E+00 
+RO           5.28E+11    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       9.38E+01    0.00E+00 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       1.01E+16    0.00E+00 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            1.03
+

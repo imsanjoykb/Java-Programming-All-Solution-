@@ -1,0 +1,22 @@
+* C:\Users\Sanjoy Kumar\Documents\AcEquivqlentCktExp5.sch
+
+* Schematics Version 9.2
+* Wed Jan 31 00:35:00 2018
+
+
+
+** Analysis setup **
+.DC LIN V_V2 0 5 .01 
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "AcEquivqlentCktExp5.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

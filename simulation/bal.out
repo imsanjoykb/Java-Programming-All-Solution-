@@ -1,0 +1,47 @@
+
+**** 01/26/18 09:52:51 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\Sanjoy Kumar\Documents\bal.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Fri Jan 26 09:52:43 2018
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "bal.net"
+
+
+
+**** INCLUDING bal.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0001 0  1k  
+V_V2         $N_0001 0 0V
+V_V1         $N_0001 0 10v
+
+**** RESUMING bal.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+ERROR -- Voltage source and/or inductor loop involving V_V1
+You may break the loop by adding a series resistance

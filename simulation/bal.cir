@@ -1,0 +1,21 @@
+* C:\Users\Sanjoy Kumar\Documents\bal.sch
+
+* Schematics Version 9.2
+* Fri Jan 26 09:52:43 2018
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "bal.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
